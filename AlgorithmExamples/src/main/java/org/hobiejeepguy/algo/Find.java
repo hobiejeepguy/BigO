@@ -4,8 +4,8 @@ import org.hobiejeepguy.Main;
 
 public class Find {
 
-    public static void printEvenNumbers() {
-        int[] intArray = Main.generateRandomInts(100, 1000);
+    public static void findEvenNumbers(int size, int moder) {
+        int[] intArray = Main.generateRandomInts(size, moder);
 
         for (int arrayVal : intArray) {
             if (arrayVal % 2 == 0)

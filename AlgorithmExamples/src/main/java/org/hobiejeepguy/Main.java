@@ -1,14 +1,15 @@
 package org.hobiejeepguy;
 
 import org.hobiejeepguy.algo.Find;
+import org.hobiejeepguy.algo.Sort;
 import java.util.ArrayList;
 import java.util.Random;
 
 public class Main {
     public static void main(String[] args)
     {
-        System.out.println("Hello world!");
-        Find.printEvenNumbers();
+        //Find.findEvenNumbers(10, 100);
+        Sort.doBubbleSort(10, 100);
     }
 
     // Helper function
