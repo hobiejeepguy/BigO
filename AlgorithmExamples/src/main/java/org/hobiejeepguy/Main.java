@@ -1,6 +1,7 @@
 package org.hobiejeepguy;
 
 import org.hobiejeepguy.algo.Find;
+import org.hobiejeepguy.algo.Resize;
 import org.hobiejeepguy.algo.Sort;
 import java.util.ArrayList;
 import java.util.Random;
@@ -9,7 +10,11 @@ public class Main {
     public static void main(String[] args)
     {
         //Find.findEvenNumbers(10, 100);
-        Sort.doBubbleSort(10, 100);
+        //Find.doBreadthFirstSearch(0,0);
+        //Sort.doBubbleSort(10, 100);
+        char[] testValues = {'a','b','d'};
+        System.out.println(testValues);
+        System.out.println(Resize.insert(testValues, 'c', 2));
     }
 
     // Helper function
