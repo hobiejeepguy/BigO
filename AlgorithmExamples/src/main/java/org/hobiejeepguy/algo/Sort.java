@@ -5,7 +5,7 @@ import org.hobiejeepguy.Main;
 public class Sort {
     public static void doBubbleSort(int size, int moder) {
 
-        int[] valsToSort = Main.generateRandomInts(size, moder);
+        int[] valsToSort = Main.generateRandomInts(size);
 
         for(int stp=valsToSort.length; stp>0; stp--) {
             for(int pos=0; pos<stp-1; pos++) {
