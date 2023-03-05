@@ -12,9 +12,9 @@ public class Main {
         //Find.findEvenNumbers(10, 100);
         //Find.doBreadthFirstSearch(0,0);
         //Sort.doBubbleSort(10, 100);
-        char[] testValues = {'a','b','d'};
+        char[] testValues = {'a','b','c','c','d','e'};
         System.out.println(testValues);
-        System.out.println(Resize.insert(testValues, 'c', 2));
+        System.out.println(Resize.remove(testValues, 2));
     }
 
     // Helper function
