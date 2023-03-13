@@ -11,10 +11,15 @@ import java.util.Arrays;
 public class Main {
     public static void main(String[] args)
     {
-        Find.doLinearSearch(10, true);
-        //Find.printEvenNumbers(22);
+        //int[] sampleSet = Main.generateRandomInts(size);
+        char[] sampleSet = Main.generateRandomChars(100);
+        char target = Main.getRandomChar();
+
+        //Find.doLinearSearch(true, sampleSet);
+        //Find.doBinarySearch(true, sampleSet, target);
+        //Find.printEvenNumbers(22, true);
         //Find.doBreadthFirstSearch(0);
-        //Sort.doBubbleSort(10);
+        //Sort.doBubbleSort(true, sampleSet);
         //System.out.println(Arrays.toString(testValuesChar));
         //System.out.println(Arrays.toString(Resize.remove(testValuesChar, 2)));
     }

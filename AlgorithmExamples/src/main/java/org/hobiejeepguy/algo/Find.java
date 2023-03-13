@@ -7,35 +7,33 @@ import java.util.Arrays;
 
 public class Find {
 
-    public static void printEvenNumbers(int size, boolean printActive) {
+    public static void printEvenNumbers(boolean isDebugMode, int[] sampleSet) {
         ArrayList<Integer> evens = new ArrayList();
-        int[] sampleSet = Main.generateRandomInts(size);
 
-        if(printActive) System.out.println(Arrays.toString(sampleSet));
+        if(isDebugMode) System.out.println(Arrays.toString(sampleSet));
 
         for (int curVal : sampleSet) {
-            if (curVal % 2 == 0)
+            if (curVal % 2 == 0 && curVal != 0)
                 evens.add(Integer.valueOf(curVal));
         }
 
-        if(printActive) System.out.println(Arrays.toString(evens.toArray()));
+        if(isDebugMode) System.out.println(Arrays.toString(evens.toArray()));
     }
 
-    public static void doLinearSearch(int size, boolean printActive) {
-        char[] sampleSet = Main.generateRandomChars(100);
-        char targetChar = Main.getRandomChar();
+    public static void doLinearSearch(boolean isDebugMode, char[] sampleSet, char target) {
         ArrayList<Integer> locations = new ArrayList<Integer>();
 
-        System.out.println(Arrays.toString(sampleSet));
-        System.out.println(targetChar);
+        if(isDebugMode) System.out.println(Arrays.toString(sampleSet));
+        if(isDebugMode) System.out.println(target);
 
         for(int stp = 0; stp < sampleSet.length; stp++) {
-            if(sampleSet[stp] == targetChar)
+            if(sampleSet[stp] == target)
                 locations.add(stp);
         }
 
-        System.out.println(Arrays.toString(locations.toArray()));
+        if(isDebugMode) System.out.println(Arrays.toString(locations.toArray()));
     }
+
 
     public static void doBreadthFirstSearch(int size) {
         char[] cells = new char[]{'.','.','.','X','.','.'};
