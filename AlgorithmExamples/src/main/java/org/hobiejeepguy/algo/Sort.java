@@ -22,4 +22,24 @@ public class Sort {
 
         return sampleSet;
     }
+
+    public static char[] doSelectionSort(boolean isDebugMode, char[] sampleSet) {
+
+        if(isDebugMode) System.out.println(Arrays.toString(sampleSet));
+
+        for(int stp1 = 0; stp1 < sampleSet.length; stp1++) {
+            int min = stp1;
+            for (int stp2 = stp1; stp2 < sampleSet.length; stp2++) {
+                if(sampleSet[stp2] < sampleSet[min]) {
+                    min = stp2;
+                }
+            }
+            Main.swapValues(sampleSet, stp1, min);
+        }
+
+        if(isDebugMode) System.out.println(Arrays.toString(sampleSet));
+
+        return sampleSet;
+    }
+
 }

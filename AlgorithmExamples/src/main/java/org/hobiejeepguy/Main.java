@@ -12,7 +12,7 @@ public class Main {
     public static void main(String[] args)
     {
         //int[] sampleSet = Main.generateRandomInts(size);
-        char[] sampleSet = Main.generateRandomChars(100);
+        char[] sampleSet = Main.generateRandomChars(60);
         char target = Main.getRandomChar();
 
         //Find.doLinearSearch(true, sampleSet);
@@ -20,8 +20,7 @@ public class Main {
         //Find.printEvenNumbers(22, true);
         //Find.doBreadthFirstSearch(0);
         //Sort.doBubbleSort(true, sampleSet);
-        //System.out.println(Arrays.toString(testValuesChar));
-        //System.out.println(Arrays.toString(Resize.remove(testValuesChar, 2)));
+        //Sort.doSelectionSort(true, sampleSet);
     }
 
     // Helper functions
@@ -48,6 +47,16 @@ public class Main {
 
     public static char getRandomChar() {
         return (char)(((Math.random()*100)%93)+33);
+    }
+
+    public static char[] swapValues(char[] sampleSet, int pos1, int pos2) {
+        char val1 = sampleSet[pos1];
+        char val2 = sampleSet[pos2];
+
+        sampleSet[pos1] = val2;
+        sampleSet[pos2] = val1;
+
+        return sampleSet;
     }
 
 }

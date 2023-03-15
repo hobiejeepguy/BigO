@@ -34,6 +34,28 @@ public class Find {
         if(isDebugMode) System.out.println(Arrays.toString(locations.toArray()));
     }
 
+    public static void doBinarySearch(boolean isDebugMode, char[] sampleSet, char target) {
+        int startPos=0;
+        int endPos=sampleSet.length;
+        sampleSet=Sort.doBubbleSort(false, sampleSet);
+
+        if(isDebugMode) System.out.println(Arrays.toString(sampleSet));
+        if(isDebugMode) System.out.println(target);
+
+        while(startPos < endPos){
+            int middlePos = (startPos + endPos) / 2;
+            if(target > sampleSet[middlePos]) {
+                startPos = middlePos;
+            } else if (target < sampleSet[middlePos]) {
+                endPos = middlePos;
+            } else {
+                System.out.println(middlePos);
+                break;
+            }
+        }
+
+    }
+
 
     public static void doBreadthFirstSearch(int size) {
         char[] cells = new char[]{'.','.','.','X','.','.'};
